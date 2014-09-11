@@ -15,22 +15,24 @@
 
 	<!-- CONTENT -->
 	<div class='search'>
-		<select name='pokemon'>
-			<?php 
-				include 'getData.php'; 
+		<form method='POST' action='#'>
+			<select name='pokemon'>
+				<?php 
+					include 'getData.php'; 
 
-				$output = getRaw("http://pokeapi.co/api/v1/pokedex/1/"); 
-				$pokemon = parseJSON($output); 
-				$urls = storeKeys($pokemon); 
+					$output = getRaw("http://pokeapi.co/api/v1/pokedex/1/"); 
+					$pokemon = parseJSON($output); 
+					$urls = storeKeys($pokemon); 
 
 
-				foreach($urls as $name => $url)
-				{
-					echo "<option value=". $url . ">" . $name . "</option>";
-				}
+					foreach($urls as $name => $url)
+					{
+						echo "<option value=". $url . ">" . $name . "</option>";
+					}
 
-			?>
-		</select>
+				?>
+			</select>
+		</form>
 		
 	</div>
 	<!-- END CONTENT -->
