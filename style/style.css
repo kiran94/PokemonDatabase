@@ -1,0 +1,19 @@
+span
+{
+	font-size: 10px;  
+}
+
+.title
+{
+	background-color: red; 
+	color: white;
+}
+
+input[type=text]
+{
+	font-size: 10px; 
+
+	position: relative;
+	margin-left: auto; 
+	margin-right: auto; 
+}
