@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Pokemon Database</title>
-	<link rel="stylesheet" type="text/css" href="/global.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="/global.css" /> -->
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
 </head>
 <body>
@@ -15,11 +15,23 @@
 
 	<!-- CONTENT -->
 	<div class='search'>
-		<form method='POST' action='#'>
-			<input type='text' name='pokemon' placeholder='Enter A Pokemon Name's />
+		<select name='pokemon'>
+			<?php 
+				include 'getData.php'; 
 
-			<input type='submit' />
-		</form>
+				$output = getRaw("http://pokeapi.co/api/v1/pokedex/1/"); 
+				$pokemon = parseJSON($output); 
+				$urls = storeKeys($pokemon); 
+
+
+				foreach($urls as $name => $url)
+				{
+					echo "<option value=". $url . ">" . $name . "</option>";
+				}
+
+			?>
+		</select>
+		
 	</div>
 	<!-- END CONTENT -->
 

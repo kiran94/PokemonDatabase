@@ -1,6 +1,6 @@
 span
 {
-	font-size: 10px;  
+	font-size: 15px;  
 }
 
 .title
@@ -16,4 +16,10 @@ input[type=text]
 	position: relative;
 	margin-left: auto; 
 	margin-right: auto; 
+}
+
+optgroup
+{
+	font-size: 10px; 
+	padding: 10px; 
 }
