@@ -41,6 +41,10 @@
 	$spDef = $getStats['sp_def']; 
 	$speed = $getStats['speed']; 
 
+	$pokedex_id = $getStats['national_id']; 
+	$weight = $getStats['weight']; 
+	$height = $getStats['height']; 
+
 	$type = ucfirst(parseJSON($output, 'types')[0]['name']); 
 	
 	
@@ -63,6 +67,16 @@
 		echo "<div class='attr_title'>"; 
 			echo "<h3>Description</h3>";
 			echo $description_data_parsed; 
+
+			echo "<br/>"; 
+			echo "<br/>"; 
+			echo "Pokedex ID: " . $pokedex_id;
+			echo "<br/>"; 
+
+			echo "Height: " . $weight; 
+			echo "<br/>"; 
+
+			echo "Weight: " . $height;  
 		echo "</div>"; 
 
 		echo "<div class='attr_title'>"; 
@@ -103,15 +117,32 @@
 
 
 		//MOVE TABLE. 
-		echo "<table class='moves-table'>"; 
-			echo "<th> Moves </th>"; 
+		// echo "<table class='moves-table'>"; 
+		echo "<div class='attr_title'>"; 
+			echo "<h3> Moves </h3>"; 
 			for($i=0; $i<sizeof($getMoves);$i++)
 			{
-				echo "<tr>"; 
+				// echo "<tr>"; 
+				if($i%2==0)
+				{
+					echo "<span class='stand_out_text'>"; 
+				}
 				echo "<td><a href=/move_get_data?" . $getMoves[$i]['resource_uri'] . ">" . $getMoves[$i]['name'] . "</a></td>";
-				echo "</tr>";  
+				
+				if($i%2==0)
+				{
+					echo "<span>"; 
+				}
+
+				if($i!=sizeof($getMoves)-1)
+				{
+					echo ","; 
+				}
+				
+				// echo "</tr>";  
 			}
-		echo "</table>"; 
+		// echo "</table>";
+		echo "</div>";  
 
 		//ABILITIES 
 		echo "<div class='attr_title'>"; 

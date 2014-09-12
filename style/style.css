@@ -10,7 +10,7 @@ span
 
 .title
 {
-	background-color: #ccc; 
+	background-color: #00FFFF; 
 	color: white;
 }
 
@@ -41,7 +41,7 @@ th, td, tr
 {
 	border: 1px solid black; 
 	padding: 10px; 
-	font-size: 10px; 
+	font-size: 15px; 
 }
 
 .sprite_name h1
@@ -51,9 +51,26 @@ th, td, tr
 
 .attr_title h3
 {
-	background-color: grey; 
+	background-color: #00FFFF; 
 	border-radius: 15px; 
 
+	padding: 5px; 
+}
+
+a
+{
+	color: black;
+	text-decoration: none; 
+}
+
+a:hover
+{
+	text-decoration: underline; 
+}
+
+.stand_out_text
+{
+	font-size: 20px; 
 	padding: 5px; 
 }
 
