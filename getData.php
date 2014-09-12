@@ -9,7 +9,15 @@
 	function parseJSON($output, $extracter)
 	{
 		$data = json_decode($output, true); 
-		$pokemon = $data[$extracter]; 
+		if($extracter!='')
+		{
+			$pokemon = $data[$extracter]; 
+		}
+		else
+		{
+			$pokemon = $data; 
+		}
+		
 		return $pokemon; 
 	}
 

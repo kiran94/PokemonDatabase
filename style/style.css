@@ -44,5 +44,10 @@ th, td, tr
 	font-size: 10px; 
 }
 
+.sprite_name h1
+{
+	display: inline; 
+}
+
 
 

@@ -22,7 +22,17 @@
 
 
 	//GET MOVES
-	$getMoves = parseJSON($output, 'moves')
+	$getMoves = parseJSON($output, 'moves'); 
+
+	//GET Abilities
+	$getAbilities = parseJSON($output, 'abilities'); 
+
+	//GET Image 
+	$getSprite = parseJSON($output, 'sprites')[0]['resource_uri']; 
+	$sprite_url = getRaw("http://pokeapi.co/" . $getSprite); 
+	$json_sprite_url = parseJSON($sprite_url,'')['image']; 
+	
+
 ?>
 <!DOCTYPE html> 
 <html>
@@ -32,18 +42,34 @@
 </head>
 <body>
 	<?php 
-		echo "<h1>" . ucfirst($name_data_parsed['name']) . "</h1>";  
+		echo "<div class='sprite_name'>"; 
+			echo "<img src='http://pokeapi.co/" . $json_sprite_url . "' alt='image' />"; 
+			echo "<h1>" . ucfirst($name_data_parsed['name']) . "</h1>"; 
+		echo "</div>"; 
 		echo $description_data_parsed; 
 
+		//MOVE TABLE. 
 		echo "<table class='moves-table'>"; 
-		echo "<th> Moves </th>"; 
-		for($i=0; $i<sizeof($getMoves);$i++)
-		{
-			echo "<tr>"; 
-			echo "<td><a href=/move_get_data?" . $getMoves[$i]['resource_uri'] . ">" . $getMoves[$i]['name'] . "</a></td>";
-			echo "</tr>";  
-		}
-		echo "</table>"
+			echo "<th> Moves </th>"; 
+			for($i=0; $i<sizeof($getMoves);$i++)
+			{
+				echo "<tr>"; 
+				echo "<td><a href=/move_get_data?" . $getMoves[$i]['resource_uri'] . ">" . $getMoves[$i]['name'] . "</a></td>";
+				echo "</tr>";  
+			}
+		echo "</table>"; 
+
+		//ABILITIES 
+		echo "<h3>Abilities</h3>";
+		echo "<ul>"; 
+			for($i=0;$i<sizeof($getAbilities);$i++)
+			{
+				echo "<li><a href=" . $getAbilities[$i]['resource_uri'] . ">" . $getAbilities[$i]['name'] . "</a></li>"; 
+			}
+		echo "</ul>"; 
+
+		//Image Sprite
+
 	?>
 </body>
 </html>
