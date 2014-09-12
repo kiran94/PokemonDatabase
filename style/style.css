@@ -1,3 +1,8 @@
+body
+{
+	font-family: Monaco, Consolas, "Lucida Console", monospace;
+}
+
 span
 {
 	font-size: 15px;  
@@ -5,7 +10,7 @@ span
 
 .title
 {
-	background-color: red; 
+	background-color: #ccc; 
 	color: white;
 }
 
@@ -23,3 +28,21 @@ optgroup
 	font-size: 10px; 
 	padding: 10px; 
 }
+
+table 
+{
+	border: 1px solid black; 
+	padding: 10px; 
+	float: right ;
+}
+
+
+th, td, tr
+{
+	border: 1px solid black; 
+	padding: 10px; 
+	font-size: 10px; 
+}
+
+
+

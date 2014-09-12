@@ -9,7 +9,7 @@
 
 	<!-- HEADER -->
 	<div class='header'>
-		<h1 class='title'>Pokemon Database<span>By Kiran Patel</span></h1>
+		<h1 class='title'>Pokemon Database</h1>
 	</div>
 	<!-- END HEADER -->
 
@@ -27,11 +27,13 @@
 
 					foreach($urls as $name => $url)
 					{
-						echo "<option value=". $url . ">" . $name . "</option>";
+						echo "<option value=". $url . ">" . ucfirst($name) . "</option>";
 					}
 
 				?>
 			</select>
+
+
 
 			<input type='submit' value='Submit' />
 		</form>
