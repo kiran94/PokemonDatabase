@@ -6,10 +6,10 @@
 		return $output; 
 	}
 
-	function parseJSON($output)
+	function parseJSON($output, $extracter)
 	{
 		$data = json_decode($output, true); 
-		$pokemon = $data["pokemon"]; 
+		$pokemon = $data[$extracter]; 
 		return $pokemon; 
 	}
 

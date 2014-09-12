@@ -15,13 +15,13 @@
 
 	<!-- CONTENT -->
 	<div class='search'>
-		<form method='POST' action='#'>
+		<form method='POST' action='pokemon_get_data.php'>
 			<select name='pokemon'>
 				<?php 
 					include 'getData.php'; 
 
 					$output = getRaw("http://pokeapi.co/api/v1/pokedex/1/"); 
-					$pokemon = parseJSON($output); 
+					$pokemon = parseJSON($output, "pokemon"); 
 					$urls = storeKeys($pokemon); 
 
 
@@ -32,6 +32,8 @@
 
 				?>
 			</select>
+
+			<input type='submit' value='Submit' />
 		</form>
 		
 	</div>
