@@ -1,6 +1,7 @@
 body
 {
 	font-family: Monaco, Consolas, "Lucida Console", monospace;
+	background-color: #E8E8EE; 
 }
 
 span
@@ -72,6 +73,37 @@ a:hover
 {
 	font-size: 20px; 
 	padding: 5px; 
+}
+
+.navbar
+{
+	text-align: right; 
+	background-color: grey; 
+	
+	padding: 10px; 
+
+	background-color: #00FFFF; 
+	border-radius: 15px; 
+	
+
+}
+
+.navbar h1 
+{
+	text-align: center; 
+}
+
+.navbar li 
+{
+	list-style-type: none; 
+	display: inline; 
+	cursor: pointer; 
+
+}
+
+.navbar form 
+{
+	display: inline; 
 }
 
 

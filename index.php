@@ -6,12 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
 </head>
 <body>
+	<?php include 'navbar.php'; ?>
 
-	<!-- HEADER -->
-	<div class='header'>
-		<h1 class='title'>Pokemon Database</h1>
-	</div>
-	<!-- END HEADER -->
+	
 
 	<!-- CONTENT -->
 	<div class='search'>

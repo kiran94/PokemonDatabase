@@ -59,6 +59,8 @@
 </head>
 <body>
 	<?php 
+		include 'navbar.php'; 
+		
 		echo "<div class='sprite_name'>"; 
 			echo "<img src='http://pokeapi.co/" . $json_sprite_url . "' alt='image' />"; 
 			echo "<h1>" . ucfirst($name_data_parsed['name']) . "</h1><span><em>[" . $type . "]</em></span>"; 
@@ -127,7 +129,7 @@
 				{
 					echo "<span class='stand_out_text'>"; 
 				}
-				echo "<td><a href=/move_get_data?" . $getMoves[$i]['resource_uri'] . ">" . $getMoves[$i]['name'] . "</a></td>";
+				echo "<td><a href=move_get_data.php?move_url=" . $getMoves[$i]['resource_uri'] . ">" . $getMoves[$i]['name'] . "</a></td>";
 				
 				if($i%2==0)
 				{
