@@ -29,7 +29,7 @@ optgroup
 	padding: 10px; 
 }
 
-table 
+.moves-table
 {
 	border: 1px solid black; 
 	padding: 10px; 
@@ -47,6 +47,14 @@ th, td, tr
 .sprite_name h1
 {
 	display: inline; 
+}
+
+.attr_title h3
+{
+	background-color: grey; 
+	border-radius: 15px; 
+
+	padding: 5px; 
 }
 
 

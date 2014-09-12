@@ -32,6 +32,19 @@
 	$sprite_url = getRaw("http://pokeapi.co/" . $getSprite); 
 	$json_sprite_url = parseJSON($sprite_url,'')['image']; 
 	
+	//GET STAT 
+	$getStats = parseJSON($output, '');
+	$hp = $getStats['hp'];   
+	$attack = $getStats['attack'];
+	$defense = $getStats['defense']; 
+	$spAtk = $getStats['sp_atk']; 
+	$spDef = $getStats['sp_def']; 
+	$speed = $getStats['speed']; 
+
+	$type = ucfirst(parseJSON($output, 'types')[0]['name']); 
+	
+	
+
 
 ?>
 <!DOCTYPE html> 
@@ -44,9 +57,50 @@
 	<?php 
 		echo "<div class='sprite_name'>"; 
 			echo "<img src='http://pokeapi.co/" . $json_sprite_url . "' alt='image' />"; 
-			echo "<h1>" . ucfirst($name_data_parsed['name']) . "</h1>"; 
+			echo "<h1>" . ucfirst($name_data_parsed['name']) . "</h1><span><em>[" . $type . "]</em></span>"; 
 		echo "</div>"; 
-		echo $description_data_parsed; 
+
+		echo "<div class='attr_title'>"; 
+			echo "<h3>Description</h3>";
+			echo $description_data_parsed; 
+		echo "</div>"; 
+
+		echo "<div class='attr_title'>"; 
+			echo "<h3>Stats</h3>";
+
+			echo "<table>"; 
+
+			echo "<tr>";
+			echo "<th>Attack</th>"; 
+			echo "<td>" . $attack . "</td>"; 
+			echo "</tr>"; 
+
+			echo "<tr>";
+			echo "<th>Defense</th>"; 
+			echo "<td>" . $defense . "</td>"; 
+			echo "</tr>"; 
+
+			echo "<tr>";
+			echo "<th>Special Attack</th>"; 
+			echo "<td>" . $spAtk . "</td>"; 
+			echo "</tr>"; 
+
+			echo "<tr>";
+			echo "<th>Special Defense</th>"; 
+			echo "<td>" . $spDef . "</td>"; 
+			echo "</tr>"; 
+
+			echo "<tr>";
+			echo "<th>Speed</th>"; 
+			echo "<td>" . $speed . "</td>"; 
+			echo "</tr>"; 
+
+
+			echo "</table>"; 
+
+			
+		echo "</div>"; 
+
 
 		//MOVE TABLE. 
 		echo "<table class='moves-table'>"; 
@@ -60,13 +114,15 @@
 		echo "</table>"; 
 
 		//ABILITIES 
-		echo "<h3>Abilities</h3>";
-		echo "<ul>"; 
-			for($i=0;$i<sizeof($getAbilities);$i++)
-			{
-				echo "<li><a href=" . $getAbilities[$i]['resource_uri'] . ">" . $getAbilities[$i]['name'] . "</a></li>"; 
-			}
-		echo "</ul>"; 
+		echo "<div class='attr_title'>"; 
+			echo "<h3>Abilities</h3>";
+			echo "<ul>"; 
+				for($i=0;$i<sizeof($getAbilities);$i++)
+				{
+					echo "<li><a href=" . $getAbilities[$i]['resource_uri'] . ">" . $getAbilities[$i]['name'] . "</a></li>"; 
+				}
+			echo "</ul>"; 
+		echo "</div>"; 
 
 		//Image Sprite
 
