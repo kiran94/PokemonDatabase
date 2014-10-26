@@ -4,6 +4,7 @@
 	<title>Pokemon Database</title>
 	<!-- <link rel="stylesheet" type="text/css" href="/global.css" /> -->
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
+
 	<meta charset="UTF-8">
 </head>
 <body>
@@ -14,6 +15,7 @@
 	<!-- CONTENT -->
 	<div class='search'>
 		<form method='POST' action='pokemon_get_data.php'>
+
 			<select name='pokemon' id='searchbar'>
 				<?php 
 					include 'getData.php'; 
@@ -38,11 +40,10 @@
 						$counter++; 
 
 
-						
-					}
 
 				?>
 			</select>
+
 
 
 

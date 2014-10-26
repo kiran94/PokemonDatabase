@@ -1,8 +1,12 @@
 body
 {
 	font-family: Monaco, Consolas, "Lucida Console", monospace;
+<<<<<<< HEAD
 	background-color: white ;
 
+=======
+	background-color: #E8E8EE; 
+>>>>>>> 98e50931988b982b4325faafd1bf30a95ac3b334
 }
 
 span
@@ -79,6 +83,7 @@ a:hover
 .navbar
 {
 	text-align: right; 
+<<<<<<< HEAD
 	
 	
 	padding: 10px; 
@@ -99,32 +104,55 @@ a:hover
 
 	box-shadow: 2px 2px 5px #888888; 
 
+=======
+	background-color: grey; 
+	
+	padding: 10px; 
+
+	background-color: #00FFFF; 
+	border-radius: 15px; 
+>>>>>>> 98e50931988b982b4325faafd1bf30a95ac3b334
 	
 
 }
 
+<<<<<<< HEAD
 .navbar h1, p 
 {
 	text-align: center; 
 	color: white; 
+=======
+.navbar h1 
+{
+	text-align: center; 
+>>>>>>> 98e50931988b982b4325faafd1bf30a95ac3b334
 }
 
 .navbar li 
 {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 98e50931988b982b4325faafd1bf30a95ac3b334
 	list-style-type: none; 
 	display: inline; 
 	cursor: pointer; 
 
+<<<<<<< HEAD
 
 }
 
 
+=======
+}
+
+>>>>>>> 98e50931988b982b4325faafd1bf30a95ac3b334
 .navbar form 
 {
 	display: inline; 
 }
 
+<<<<<<< HEAD
 .search
 {
 	display: block; 
@@ -148,5 +176,7 @@ a:hover
 }
 
 
+=======
+>>>>>>> 98e50931988b982b4325faafd1bf30a95ac3b334
 
 

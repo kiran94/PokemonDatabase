@@ -1,8 +1,12 @@
+
 <?php
 	if(!isset($_POST['pokemon']))
 	{
 		header('Location: index.php'); 
 	}
+
+
+	<?php
 
 
 	$pokemon_url = $_POST['pokemon']; 
@@ -33,6 +37,7 @@
 	$getAbilities = parseJSON($output, 'abilities'); 
 
 	//GET Image 
+
 	$getSprite_data_1 = parseJSON($output, 'sprites');
 	$getSprite_data = $getSprite_data_1[0]; 
 
@@ -41,6 +46,11 @@
 	$sprite_url = getRaw("http://pokeapi.co/" . $getSprite); 
 	$json_sprite_url_data = parseJSON($sprite_url,''); 
 	$json_sprite_url = $json_sprite_url_data['image']; 
+
+	// $getSprite = parseJSON($output, 'sprites')[0]['resource_uri']; 
+	// $sprite_url = getRaw("http://pokeapi.co/" . $getSprite); 
+	// $json_sprite_url = parseJSON($sprite_url,'')['image']; 
+
 	
 	//GET STAT 
 	$getStats = parseJSON($output, '');
@@ -55,26 +65,32 @@
 	$weight = $getStats['weight']; 
 	$height = $getStats['height']; 
 
+
 	$type_data_1 = parseJSON($output, 'types');
 	$type_data = $type_data_1[0]; 
 
 	$type = ucfirst($type_data['name']); 
 
+	
+
+
+
 ?>
+
 <!DOCTYPE html> 
 <html>
 <head>
 	<title><?php echo ucfirst($name_data_parsed['name']) . "| Pokemon Look Up";  ?></title>
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
+
 	<meta charset="UTF-8" />
 </head>
 <body>
 
+	
 	<?php 
-		include 'navbar.php';
-
-		echo "<div class='search' id='back_button'><a href='index.php'>Back</a></div>"; 
-
+		include 'navbar.php'; 
+		
 		echo "<div class='sprite_name'>"; 
 			echo "<img src='http://pokeapi.co/" . $json_sprite_url . "' alt='image' />"; 
 			echo "<h1>" . ucfirst($name_data_parsed['name']) . "</h1><span><em>[" . $type . "]</em></span>"; 

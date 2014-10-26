@@ -23,7 +23,9 @@
 <body>
 
 	<?php 
+
 		include 'navbar.php'; 
+
 		echo "<h1>" . $move_name . "</h1>"; 
 
 		echo $move_data_raw['description']; 
