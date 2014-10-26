@@ -1,0 +1,152 @@
+body
+{
+	font-family: Monaco, Consolas, "Lucida Console", monospace;
+	background-color: white ;
+
+}
+
+span
+{
+	font-size: 15px;  
+}
+
+.title
+{
+	background-color: #00FFFF; 
+	color: white;
+}
+
+input[type=text]
+{
+	font-size: 10px; 
+
+	position: relative;
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+optgroup
+{
+	font-size: 10px; 
+	padding: 10px; 
+}
+
+.moves-table
+{
+	border: 1px solid black; 
+	padding: 10px; 
+	float: right ;
+}
+
+
+th, td, tr
+{
+	border: 1px solid black; 
+	padding: 10px; 
+	font-size: 15px; 
+}
+
+.sprite_name h1
+{
+	display: inline; 
+}
+
+.attr_title h3
+{
+	background-color: #00FFFF; 
+	border-radius: 15px; 
+
+	padding: 5px; 
+}
+
+a
+{
+	color: black;
+	text-decoration: none; 
+}
+
+a:hover
+{
+	text-decoration: underline; 
+}
+
+.stand_out_text
+{
+	font-size: 20px; 
+	padding: 5px; 
+}
+
+.navbar
+{
+	text-align: right; 
+	
+	
+	padding: 10px; 
+
+	/*background-color: #00FFFF; */
+	background-color: #222222; 
+
+	border: 1px solid black;
+	/*border-radius: 15px; */
+
+	width: 50%; 
+
+	display: block; 
+	margin-right: auto; 
+	margin-left: auto; 
+
+	
+
+	box-shadow: 2px 2px 5px #888888; 
+
+	
+
+}
+
+.navbar h1, p 
+{
+	text-align: center; 
+	color: white; 
+}
+
+.navbar li 
+{
+
+	list-style-type: none; 
+	display: inline; 
+	cursor: pointer; 
+
+
+}
+
+
+.navbar form 
+{
+	display: inline; 
+}
+
+.search
+{
+	display: block; 
+	margin: auto; 
+}
+
+#searchbar, #searchbar_submit
+{
+	display: block; 
+	margin-right: auto; 
+	margin-left: auto; 
+
+	font-size: 2em; 
+
+	/*width: 100%; */
+}
+
+#back_button
+{
+	text-align: right; 
+}
+
+
+
+
