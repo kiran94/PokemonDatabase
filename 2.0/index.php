@@ -16,7 +16,7 @@
 	<div class='container'>
 
 		<div class='row'>
-			<div class='col-xs-12'><h1 id='title'>Pokemon Database</h1></div>
+			<div class='col-xs-12'><h1 id='titleq'>Pokemon Database</h1></div>
 			<hr class='rule' />
 		</div>
 

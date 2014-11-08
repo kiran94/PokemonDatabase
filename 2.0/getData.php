@@ -19,7 +19,8 @@
 			echo "<div class='col-xs-12 col-sm-1 pokemon_profile'>";
 			echo $currentPokemon['ename']; 
 			echo "<div class='pokemon_proile_id'>" . $currentPokemon['id'] . "</div>"; 
-			//echo getImg($currentPokemon['id']); 
+			//echo "assets/data/sprites/". ltrim($currentPokemon['id'])  . ".png";
+			echo "<img src=assets/data/sprites/". ltrim($currentPokemon['id'], '0')  . ".png class='img-responsive'></img>"; 
 			echo "</div>"; 
 			
 		}

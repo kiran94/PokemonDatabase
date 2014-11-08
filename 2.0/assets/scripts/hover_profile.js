@@ -10,7 +10,7 @@ $(document).ready(function()
 	$('.pokemon_profile').on('mouseout', function()
 	{
 
-		$(this).css( "backgroundColor", "white" );
+		$(this).css( "backgroundColor", "#EE3B3B" );
 	}); 
 	
 
