@@ -16,8 +16,12 @@
 
 		foreach($data as $currentPokemon)
 		{
+			echo "<div class='col-xs-12 col-sm-1 pokemon_profile'>";
 			echo $currentPokemon['ename']; 
-			echo "<br />"; 
+			echo "<div class='pokemon_proile_id'>" . $currentPokemon['id'] . "</div>"; 
+			//echo getImg($currentPokemon['id']); 
+			echo "</div>"; 
+			
 		}
 	}
 
@@ -32,7 +36,7 @@
 
 		$imageLocation = $mediaJson['image']; 
 
-		$imgTagData = "<img src=http://pokeapi.co/" . $imageLocation  ."></img>";
+		$imgTagData = "<img src=http://pokeapi.co/" . $imageLocation  ." class='img-responsive'></img>";
 
 		return $imgTagData; 
 	}

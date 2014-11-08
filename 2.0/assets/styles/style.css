@@ -1,0 +1,34 @@
+body 
+{
+	background-color: red; 
+	font-family: Tahoma,Verdana,Segoe,sans-serif; 
+}
+
+.pokemon_profile
+{
+	padding: 10px; 
+	border: 1px solid white;
+
+	margin: 1px; 
+	background-color: white; 
+	cursor: pointer; 
+
+}
+
+.pokemon_proile_id
+{
+	text-align: right; 
+}
+
+.rule 
+{
+	border: 1px solid white;
+}
+
+#title 
+{
+	color: white;
+}
+
+
+
