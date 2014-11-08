@@ -6,7 +6,11 @@
 
 	$output = get($url); 
 
-	echo $output; 
+	decode_local_file($output); 
+
+	$test = getImg("500");
+
+	echo $test; 
 
 ?>
 
