@@ -22,6 +22,7 @@
 		{
 			echo "<div class='col-xs-12 col-sm-1 pokemon_profile'>";
 			echo $currentPokemon['ename']; 
+
 			//echo "<div class='pokemon_proile_id'>" . $currentPokemon['id'] . "</div>"; 
 			
 			
@@ -38,7 +39,7 @@
 			}
 
 			
-			echo "</div>"; 
+
 			
 		}
 	}
