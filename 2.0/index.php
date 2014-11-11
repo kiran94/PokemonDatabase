@@ -3,24 +3,27 @@
 <head>
 	<title>Pokemon Database</title>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 	<!-- STYLE -->
 		<link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
 	<!-- END STYLE -->
+
+
 </head>
 <body>
 
 	
 
-	<div class='container'>
+	<div class='container-fluid'>
 
 		<div class='row'>
 			<div class='col-xs-12'><h1 id='title'>Pokemon Database</h1></div>
 			<hr class='rule' />
 		</div>
 
-		<div class='row'>
+		<div class='row' id='marginleft'>
 
 			<?php 
 
@@ -31,11 +34,7 @@
 				$output = get($url); 
 
 				decode_local_file($output); 
-
-				// $test = getImg("500");
-
-				// echo $test; 
-
+				
 			?>
 
 

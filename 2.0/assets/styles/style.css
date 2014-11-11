@@ -1,17 +1,31 @@
 body 
 {
-	background-color: red; 
+	background-color: white; 
 	font-family: Tahoma,Verdana,Segoe,sans-serif; 
+}
+
+#title
+{
+	text-align: center; 
 }
 
 .pokemon_profile
 {
-	padding: 10px; 
-	border: 1px solid white;
+	padding-right: 10px; 
+	border: 1px solid #EE3B3B;
 
 	margin: 1px; 
-	background-color: white; 
+	background-color: #EE3B3B; 
 	cursor: pointer; 
+
+	/*margin-left: 2px; 
+	margin-right: 2px; 
+	display: block; */
+
+	width: 100px; 
+	height: 100px; 
+
+	color: white; 
 
 }
 
@@ -22,13 +36,15 @@ body
 
 .rule 
 {
-	border: 1px solid white;
+	border: 1px solid #EE3B3B;
 }
 
-#title 
+#marginleft
 {
-	color: white;
+	margin-left: 10px; 
 }
+
+
 
 
 

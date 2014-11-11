@@ -14,12 +14,30 @@
 	{
 		$data = json_decode($data_output, true); 
 
+		$ANIM_FLAG = false; 
+
+
+
 		foreach($data as $currentPokemon)
 		{
 			echo "<div class='col-xs-12 col-sm-1 pokemon_profile'>";
 			echo $currentPokemon['ename']; 
-			echo "<div class='pokemon_proile_id'>" . $currentPokemon['id'] . "</div>"; 
-			//echo getImg($currentPokemon['id']); 
+			//echo "<div class='pokemon_proile_id'>" . $currentPokemon['id'] . "</div>"; 
+			
+			
+
+			if($ANIM_FLAG == false)
+			{
+				// NON ANIMATED
+				echo "<img src=assets/data/sprites/". ltrim($currentPokemon['id'], '0')  . ".png class='img-responsive'></img>";
+			} 
+			else
+			{
+				// ANIMATED 
+				echo "<img src=assets/data/6th_gen_animated/". $currentPokemon['id']  . ".gif class='img-responsive'></img>"; 
+			}
+
+			
 			echo "</div>"; 
 			
 		}
