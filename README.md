@@ -12,3 +12,5 @@ For version 2.0 of the project I decided to use local JSON files of the for the 
 Credit goes to fanzeyi for creating the JSON files required for this project. 
 
 Credit for Sprites 1-5th gen: http://pkmn.net/?action=content&page=viewpage&id=8644
+
+I am currently working on getting 6th gen sprites
